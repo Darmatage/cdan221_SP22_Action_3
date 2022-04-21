@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 132708284}
   - component: {fileID: 132708285}
   - component: {fileID: 132708286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 198540507}
   - component: {fileID: 198540506}
   - component: {fileID: 198540508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198540505}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.6, y: -9.17, z: 36.73495}
+  m_LocalPosition: {x: -12.32, y: -2.38, z: 36.73495}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_Children:
   - {fileID: 1492009191}
@@ -331,7 +331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215049617}
   - component: {fileID: 215049616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mushroom2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +378,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f3846fabb2d7649b3b99c219ac54b857, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -398,12 +398,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215049615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.83, y: 6.08, z: 0}
+  m_LocalPosition: {x: 14.57, y: -1.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 340112484}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281140663
 GameObject:
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 281140665}
   - component: {fileID: 281140664}
   - component: {fileID: 281140666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281140663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.83, y: -2.87, z: 18.367476}
+  m_LocalPosition: {x: 3.4, y: -2.14, z: 18.367476}
   m_LocalScale: {x: 1, y: 1, z: 3}
   m_Children:
   - {fileID: 1406261937}
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340112484}
   - component: {fileID: 340112485}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mushroom2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,9 +530,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340112483}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6800003, y: 7.46, z: 0}
+  m_LocalPosition: {x: -30.04, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 752103708}
   m_Father: {fileID: 215049617}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -576,7 +577,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f3846fabb2d7649b3b99c219ac54b857, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -665,11 +666,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603731153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.47, y: 0.42, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1213013215}
   - {fileID: 1956726386}
+  - {fileID: 1213013215}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -683,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 752103708}
   - component: {fileID: 752103707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mushroom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,13 +750,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752103706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.47, y: -7.68, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.64, y: -0.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1078255288}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 340112484}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078255287
 GameObject:
@@ -767,7 +768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1078255288}
   - component: {fileID: 1078255289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mushroom1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078255287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9300003, y: 6.5899997, z: 0}
+  m_LocalPosition: {x: -17.05, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 752103708}
@@ -849,7 +850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1213013215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG_mushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +871,7 @@ Transform:
   - {fileID: 281140665}
   - {fileID: 198540507}
   m_Father: {fileID: 603731156}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1406261935
 GameObject:
@@ -883,7 +884,7 @@ GameObject:
   - component: {fileID: 1406261937}
   - component: {fileID: 1406261936}
   - component: {fileID: 1406261938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,8 +929,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1370567913
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 9dd1320f0266346059fa540b8b16411d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -981,7 +982,7 @@ GameObject:
   - component: {fileID: 1408408788}
   - component: {fileID: 1408408787}
   - component: {fileID: 1408408789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1079,7 +1080,7 @@ GameObject:
   - component: {fileID: 1492009191}
   - component: {fileID: 1492009192}
   - component: {fileID: 1492009193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492009190}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.75, y: 0.01, z: 0}
+  m_LocalPosition: {x: 14.75, y: 0.01, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_Children: []
   m_Father: {fileID: 198540507}
@@ -1175,7 +1176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1956726386}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BG_Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1196,7 @@ Transform:
   m_Children:
   - {fileID: 2042095590}
   m_Father: {fileID: 603731156}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042095586
 GameObject:
@@ -1210,7 +1211,7 @@ GameObject:
   - component: {fileID: 2042095588}
   - component: {fileID: 2042095587}
   - component: {fileID: 2042095591}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Quad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1289,7 +1290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042095586}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6323373, y: -0.87230504, z: 37.73495}
+  m_LocalPosition: {x: 2.68, y: -0.82, z: 37.73495}
   m_LocalScale: {x: 18, y: 10, z: 1.0543}
   m_Children: []
   m_Father: {fileID: 1956726386}
