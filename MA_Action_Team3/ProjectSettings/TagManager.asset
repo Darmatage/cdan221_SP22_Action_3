@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - GameHandler
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,15 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
-  - Enemies
-<<<<<<< HEAD
-  - Background
-  - Foreground
-=======
-  - Foreground
-  - MainCharacter
->>>>>>> parent of a4c17c9 (I don't understand this anymore.)
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -44,9 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BG_Sky
-    uniqueID: 1370567913
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
