@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
   m_Name: TestGecko_Atlas
   m_EditorClassIdentifier: 
-  atlasFile: {fileID: 4900000, guid: c298f4ab6822376438a17a93ffe21d82, type: 3}
+  atlasFile: {fileID: 4900000, guid: 5c5af3d1d402ba640b605fb7c3b3d738, type: 3}
   materials:
   - {fileID: 2100000, guid: 101deb1e89884f64483a62f34c6184b3, type: 2}
