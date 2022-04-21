@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
 
-public class PlayerController : MonoBehaviour{
+public class PlayerController : MonoBehaviour
+{
 	
 	public SkeletonAnimation skeletonAnimation;
 	public AnimationReferenceAsset idle, walking, running;
@@ -18,12 +19,14 @@ public class PlayerController : MonoBehaviour{
     void Start() {
 		rigidbody = GetComponent<Rigidbody2D>();
         currentState = "idle";
-		characterScale = transform.localScale;
 		SetCharacterState(currentState);
-	}
+		characterScale = transform.localScale;
+
+    }
 
     // Update is called once per frame
-    void Update(){
+    void Update()
+    {
         Move();
     }
 	
@@ -48,11 +51,15 @@ public class PlayerController : MonoBehaviour{
 		}
 		else if (state.Equals("Walking"))
 		{
+<<<<<<< HEAD
 			SetAnimation(walking, true, 2f);
+=======
+			SetAnimation(walking, true, 1f);
+>>>>>>> parent of a4c17c9 (I don't understand this anymore.)
 		}
 		else if (state.Equals("Running"))
 		{
-			SetAnimation(running, true, 3f);
+			SetAnimation(running, true, 2f);
 		}
 	}
 	
