@@ -48,6 +48,16 @@ public class PlayerMove : MonoBehaviour {
                   rb2D.velocity = new Vector2(rb2D.velocity.x / 1.1f, rb2D.velocity.y) ;
             }
       }
+	  
+	  public void speedBoost(float speedBoost, float speedLength){
+            runSpeed = runSpeed * speedBoost;
+            StartCoroutine(normalSpeed(speedLength));
+      }
+
+      IEnumerator normalSpeed(float speedLength){
+            yield return new WaitForSeconds(speedLength);
+            runSpeed = startSpeed;       //NOTE: returns this stat to normal
+      }
 
       private void playerTurn(){
             // NOTE: Switch player facing label
