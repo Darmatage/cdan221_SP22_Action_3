@@ -12,10 +12,15 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Enemies
+<<<<<<< HEAD
+  - Background
+  - Foreground
+=======
+  - Foreground
+  - MainCharacter
+>>>>>>> parent of a4c17c9 (I don't understand this anymore.)
   - 
   - 
   - 
