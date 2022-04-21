@@ -50,10 +50,6 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetAnimation(walking, true, 2f);
 		}
-		else if (state.Equals("Running"))
-		{
-			SetAnimation(running, true, 3f);
-		}
 	}
 	
 	public void Move()
@@ -66,20 +62,16 @@ public class PlayerController : MonoBehaviour{
 				if(movement > 0)
 				{
 					transform.localScale = new Vector2(characterScale.x, characterScale.y);
-
 				}	
 				else	
 				{
 					transform.localScale = new Vector2(-characterScale.x, characterScale.y);
-
 				}
-			
-			SetCharacterState("Running");
-			{
-				if(Input.GetButtonDown("Run"));
-			}
-			SetCharacterState("Idle");
-		}		
+		}
+		else	
+		{
+		SetCharacterState("idle");
+		}
 		
 	}
 }
