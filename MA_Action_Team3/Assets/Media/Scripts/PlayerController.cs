@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour{
 		}
 		else if (state.Equals("Walking"))
 		{
-			SetAnimation(idle, false, 1f);
 			SetAnimation(walking, true, 2f);
 		}
 		else if (state.Equals("Running"))
