@@ -101,7 +101,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 4.299988}
-  m_SizeDelta: {x: 160, y: 50}
+  m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &943734014918689541
 CanvasRenderer:
@@ -133,8 +133,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_FontSize: 35
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
@@ -144,7 +144,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Health??
+  m_Text: 'HEALTH: ???'
 --- !u!1 &943734015164035501
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,8 +281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -489, y: 271.7}
-  m_SizeDelta: {x: 200, y: 90}
+  m_AnchoredPosition: {x: -506, y: 304}
+  m_SizeDelta: {x: 250, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &943734015205743445
 CanvasRenderer:
@@ -436,7 +436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 559, y: 271}
+  m_AnchoredPosition: {x: 580, y: 320}
   m_SizeDelta: {x: 100, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &943734016170245751
@@ -561,6 +561,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6655769257297552324, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 943734014918689542}
+    - target: {fileID: 6655769257297552324, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
+      propertyPath: tokensText
+      value: 
+      objectReference: {fileID: 943734016140394143}
     - target: {fileID: 8479898225222954880, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
       propertyPath: m_Name
       value: GameHandler
