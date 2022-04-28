@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour{
 	public string currentAnimation;
 	public float jumpSpeed;
 	public string previousState;
+	// Added Content to create more controls
+	public bool isAlive = true;
+	public float startSpeed = 10f;
+	public static float runSpeed = 10f;
 	
     // use this for initialization.
     void Start() {
@@ -63,7 +67,7 @@ public class PlayerController : MonoBehaviour{
 		}
 		else if (state.Equals("Jumping"))
 		{
-			SetAnimation(jumping, false, 0.25f);
+			SetAnimation(jumping, false, 0.35f);
 		}
 	else
 		{
@@ -115,5 +119,15 @@ public class PlayerController : MonoBehaviour{
 		SetCharacterState("Jumping");
 		}
 	}
+	
+	//Added content.
+	 public bool IsGrounded() {
+            Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
+            Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
+           if ((groundCheck != null) || (enemyCheck != null)) {
+                  return true;
+                  //Debug.Log("I can jump now!");
+            }
+	 }
 }
 

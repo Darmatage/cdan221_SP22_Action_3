@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour{
 	public string currentAnimation;
 	public float jumpSpeed;
 	public string previousState;
+	// Added Content to create more controls
+	public bool isAlive = true;
+	public float startSpeed = 10f;
+	public static float runSpeed = 10f;
 	
     // use this for initialization.
     void Start() {
