@@ -6,13 +6,15 @@ using Spine.Unity;
 public class PlayerController : MonoBehaviour{
 	
 	public SkeletonAnimation skeletonAnimation;
-	public AnimationReferenceAsset idle, walking, running;
+	public AnimationReferenceAsset idle, walking, jumping;
 	public string currentState;
 	public float speed;
 	public float movement;
 	private Rigidbody2D rigidbody;
 	private Vector3 characterScale;
 	public string currentAnimation;
+	public float jumpSpeed;
+	public string previousState;
 	
     // use this for initialization.
     void Start() {
@@ -34,10 +36,19 @@ public class PlayerController : MonoBehaviour{
 		{
 			return;
 		}
-		skeletonAnimation.state.SetAnimation(0, animation, loop).TimeScale = timeScale;
+		Spine.TrackEntry animationEntry = skeletonAnimation.state.SetAnimation(0, animation, loop);
+		animationEntry.TimeScale = timeScale;
+		animationEntry.Complete += AnimationEntry_Complete;
 		currentAnimation = animation.name;
 	}
 	
+	private void AnimationEntry_Complete(Spine.TrackEntry trackEntry)
+	{
+		if(currentState.Equals("Jumping"))
+		{
+			SetCharacterState(previousState);
+		}
+	}
 	
 	//checks character state and sets the animation accordingly.
 	public void SetCharacterState(string state)
@@ -50,10 +61,16 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetAnimation(walking, true, 2f);
 		}
-		else if (state.Equals("Running"))
+		else if (state.Equals("Jumping"))
 		{
-			SetAnimation(running, true, 3f);
+			SetAnimation(jumping, false, 0.25f);
 		}
+	else
+		{
+			SetAnimation(idle, true, 1f);
+		}
+		
+		currentState = state;
 	}
 	
 	public void Move()
@@ -62,6 +79,7 @@ public class PlayerController : MonoBehaviour{
 			rigidbody.velocity = new Vector2(movement * speed, rigidbody.velocity.y);
 		if (movement != 0)
 		{
+			if (!currentState.Equals("Jumping"))
 			SetCharacterState("Walking");
 				if(movement > 0)
 				{
@@ -72,10 +90,30 @@ public class PlayerController : MonoBehaviour{
 					transform.localScale = new Vector2(-characterScale.x, characterScale.y);
 				}
 		}
+		
+		
 		else	
 		{
-		SetCharacterState("idle");
+			if (!currentState.Equals("Jumping"))
+				{
+					SetCharacterState("Idle");
+				}
 		}
 		
+		if (Input.GetButtonDown("Jump"))
+		{
+		Jump();
+		}
+	}
+	
+	public void Jump()
+	{
+		rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
+		if (!currentState.Equals("Jumping"))
+		{
+			previousState = currentState;
+		SetCharacterState("Jumping");
+		}
 	}
 }
+

@@ -187,7 +187,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5386576501059772513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,10 @@ MonoBehaviour:
   skeletonAnimation: {fileID: 5386576501059772517}
   idle: {fileID: 11400000, guid: 784bf3c5b583e6d4cbba5af1174c47a1, type: 2}
   walking: {fileID: 11400000, guid: b98da2dfd97871142b2b87e8079eb11b, type: 2}
+  jumping: {fileID: 11400000, guid: b5f2bda14166eb14797a24b77d249a09, type: 2}
   currentState: 
   speed: 5
   movement: 0
   currentAnimation: 
+  jumpSpeed: 6
+  previousState: 
