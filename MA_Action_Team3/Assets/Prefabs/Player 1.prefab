@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 13b2d73cb12936747bd75545770472e9, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 6c68633ce4f67c447a08ffb8fe8f624b, type: 2}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
@@ -201,9 +201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 5386576501059772517}
-  idle: {fileID: 11400000, guid: 784bf3c5b583e6d4cbba5af1174c47a1, type: 2}
-  walking: {fileID: 11400000, guid: b98da2dfd97871142b2b87e8079eb11b, type: 2}
-  jumping: {fileID: 11400000, guid: b5f2bda14166eb14797a24b77d249a09, type: 2}
+  idle: {fileID: 11400000, guid: 825a41105bf15284c884778e4c0d2866, type: 2}
+  walking: {fileID: 11400000, guid: 7c870d51bf9c3004ba06f0d59236c147, type: 2}
+  jumping: {fileID: 11400000, guid: ba36fb488e25e1e4397c08cdfec925a0, type: 2}
   currentState: 
   speed: 5
   movement: 0

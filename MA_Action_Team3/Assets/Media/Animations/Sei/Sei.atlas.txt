@@ -1,0 +1,52 @@
+Sei.png
+size:536,1041
+filter:Linear,Linear
+pma:true
+Body
+bounds:2,490,255,396
+Hair
+bounds:2,134,295,354
+Head
+bounds:259,595,184,162
+offsets:1,2,187,165
+Left Arm 1
+bounds:430,335,175,67
+offsets:1,1,177,69
+rotate:90
+Left Arm 2
+bounds:2,2,238,130
+offsets:1,1,240,132
+Left Leg 1
+bounds:299,315,129,195
+offsets:2,1,132,197
+Left Leg 2
+bounds:259,512,81,185
+offsets:1,1,83,188
+rotate:90
+Left Wing
+bounds:430,63,93,88
+offsets:1,1,95,90
+rotate:90
+Necklace
+bounds:446,572,88,90
+offsets:2,1,92,93
+Right Arm 1
+bounds:430,158,175,66
+offsets:1,1,177,69
+rotate:90
+Right Arm 2
+bounds:259,759,234,127
+offsets:1,1,236,129
+Right Leg 1
+bounds:299,121,129,192
+offsets:2,2,132,195
+Right Leg 2
+bounds:242,41,78,186
+offsets:1,1,80,188
+rotate:90
+Right Wing
+bounds:445,664,93,88
+offsets:1,1,95,90
+rotate:90
+Tail
+bounds:2,888,513,151
