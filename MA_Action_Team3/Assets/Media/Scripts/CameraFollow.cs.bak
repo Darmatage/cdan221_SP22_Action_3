@@ -1,0 +1,16 @@
+using System.Collections.Generic;
+using System.Collections;
+using UnityEngine;
+
+public class CameraFollow : MonoBehaviour {
+
+      public transfrom target;
+
+      void Update () {
+            transform.position = new Vector3(
+                  transform.position.x,
+                  //Mathf.Clamp(targetToFollow.positon.y, 0f, 10f),
+                  transform.position.y,
+                  transform.position.z);
+      }
+}
