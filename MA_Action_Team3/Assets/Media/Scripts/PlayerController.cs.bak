@@ -6,7 +6,7 @@ using Spine.Unity;
 public class PlayerController : MonoBehaviour{
 	
 	public SkeletonAnimation skeletonAnimation;
-	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp;
+	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running;
 	public string currentState;
 	public float speed;
 	public float movement;
@@ -17,8 +17,9 @@ public class PlayerController : MonoBehaviour{
 	public string previousState;
 	// Added Content to create more controls
 	public bool isAlive = true;
-	public float startSpeed = 10f;
-	public static float runSpeed = 10f;
+	public float startSpeed = 3f;
+	public float runSpeed = 6f;
+	public bool isHit1 = true;
 	
     // use this for initialization.
     void Start() {
@@ -31,6 +32,7 @@ public class PlayerController : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         Move();
+		
     }
 	
 	// Sets character animation 
@@ -65,6 +67,18 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetAnimation(walking, true, 2f);
 		}
+		else if (state.Equals("Running"))
+		{
+			SetAnimation(running, true, 1f);
+		}
+		else if (state.Equals("Punch1"))
+		{
+			SetAnimation(punch, false, 1f);
+		}
+		else if (state.Equals("Punch2"))
+		{
+			SetAnimation(punch2, false, 1f);
+		}
 		else if (state.Equals("Jumping"))
 		{
 			SetAnimation(jumping, false, 0.35f);
@@ -79,14 +93,21 @@ public class PlayerController : MonoBehaviour{
 	
 	public void Move()
 	{
+		
+		
 			movement = Input.GetAxis("Horizontal");
 			rigidbody.velocity = new Vector2(movement * speed, rigidbody.velocity.y);
 		if (movement != 0)
 		{
-			if ((!currentState.Equals("Jumping"))&& (!currentState.Equals("Running"))){
-			SetCharacterState("Walking");}
-			else if (Input.GetKeyDown("Shift")){
-			SetCharacterState("Running");}
+			if ((!currentState.Equals("Jumping"))&&(Input.GetButtonDown("Run"))){
+			SetCharacterState("Running");
+			speed=runSpeed;
+			}
+			else if ((!currentState.Equals("Jumping"))&& (!currentState.Equals("Running"))){
+			SetCharacterState("Walking");
+			speed=startSpeed;
+			}
+			
 			
 			
 				if(movement > 0)
@@ -102,7 +123,7 @@ public class PlayerController : MonoBehaviour{
 		
 		else	
 		{
-			if (!currentState.Equals("Jumping"))
+			if ((!currentState.Equals("Jumping"))&&(!currentState.Equals("Punch1"))&&(!currentState.Equals("Punch2")))
 				{
 					SetCharacterState("Idle");
 				}
@@ -111,6 +132,10 @@ public class PlayerController : MonoBehaviour{
 		if (Input.GetButtonDown("Jump"))
 		{
 		Jump();
+		}
+		
+		if (Input.GetButtonDown("Attack")){
+			PlayerAttack();
 		}
 	}
 	
@@ -121,6 +146,14 @@ public class PlayerController : MonoBehaviour{
 		{
 			previousState = currentState;
 		SetCharacterState("Jumping");
+		}
+	}
+	public void PlayerAttack()
+	{
+		if (!currentState.Equals("Punch1"))
+		{
+			previousState = currentState;
+		SetCharacterState("Punch1");
 		}
 	}
 }
