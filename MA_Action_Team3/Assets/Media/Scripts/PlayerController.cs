@@ -6,7 +6,8 @@ using Spine.Unity;
 public class PlayerController : MonoBehaviour{
 	
 	public SkeletonAnimation skeletonAnimation;
-	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running;
+			//Trigger item #1: a class variable for the AnimationReferenceAsset
+	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running, wave;
 	public string currentState;
 	public float speed;
 	public float movement;
@@ -54,6 +55,13 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetCharacterState(previousState);
 		}
+		
+		//Trigger item #5: After animation is done, set the state back to the previous state
+		if((currentState.Equals("Punch1"))||(currentState.Equals("Punch2")))
+		{
+			SetCharacterState(previousState);
+		}
+		
 	}
 	
 	//checks character state and sets the animation accordingly.
@@ -71,6 +79,8 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetAnimation(running, true, 1f);
 		}
+		
+		//Trigger item #2: set the connection between the state and the animation (animation name, looping=false, speed multiplier=1f)
 		else if (state.Equals("Punch1"))
 		{
 			SetAnimation(punch, false, 1f);
@@ -129,32 +139,37 @@ public class PlayerController : MonoBehaviour{
 				}
 		}
 		
-		if (Input.GetButtonDown("Jump"))
-		{
-		Jump();
+		if (Input.GetButtonDown("Jump")){
+			Jump();
 		}
 		
+		//Trigger item #3: set the input in the Move() function
 		if (Input.GetButtonDown("Attack")){
 			PlayerAttack();
 		}
 	}
 	
-	public void Jump()
-	{
+	public void Jump(){
 		rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
 		if (!currentState.Equals("Jumping"))
 		{
 			previousState = currentState;
-		SetCharacterState("Jumping");
+			SetCharacterState("Jumping");
 		}
 	}
-	public void PlayerAttack()
-	{
-		if (!currentState.Equals("Punch1"))
-		{
+	
+	//Trigger item #4: a function that records previous state (to return to idle)
+	public void PlayerAttack(){
+		if ((!currentState.Equals("Punch1"))||(!currentState.Equals("Punch2"))){
 			previousState = "Idle";
-		SetCharacterState("Punch1");
+			//SetCharacterState("Punch1");
+			
+			if (isHit1){SetCharacterState("Punch1");}
+			else {SetCharacterState("Punch2");}
+			isHit1 = !isHit1;
+			//add PlayerAttackMelee script to the player, following tutorial for hitpoint and enemies layer
 		}
 	}
+	
 }
 
