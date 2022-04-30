@@ -6,7 +6,7 @@ using Spine.Unity;
 public class PlayerController : MonoBehaviour{
 	
 	public SkeletonAnimation skeletonAnimation;
-	public AnimationReferenceAsset idle, walking, jumping;
+	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running;
 	public string currentState;
 	public float speed;
 	public float movement;
@@ -83,8 +83,12 @@ public class PlayerController : MonoBehaviour{
 			rigidbody.velocity = new Vector2(movement * speed, rigidbody.velocity.y);
 		if (movement != 0)
 		{
-			if (!currentState.Equals("Jumping"))
-			SetCharacterState("Walking");
+			if ((!currentState.Equals("Jumping"))&& (!currentState.Equals("Running"))){
+			SetCharacterState("Walking");}
+			else if (Input.GetKeyDown("Shift")){
+			SetCharacterState("Running");}
+			
+			
 				if(movement > 0)
 				{
 					transform.localScale = new Vector2(characterScale.x, characterScale.y);

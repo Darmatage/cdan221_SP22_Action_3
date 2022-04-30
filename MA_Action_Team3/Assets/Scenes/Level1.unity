@@ -267,9 +267,41 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: fall
+      value: 
+      objectReference: {fileID: 11400000, guid: 6da9ee3cc253c034a9778f64655afc13, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: hurt
+      value: 
+      objectReference: {fileID: 11400000, guid: e89e2ac060139ea44a796c80a97b1d3d, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 11400000, guid: 8b1806811da1ac749a556aa02d3f936d, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: punch
+      value: 
+      objectReference: {fileID: 11400000, guid: 831b00b4f4c3ddd40b8faed0c30c848b, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: stomp
+      value: 
+      objectReference: {fileID: 11400000, guid: 3fdf0a3b7f24da94fac80392fcce4a73, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: crouch
+      value: 
+      objectReference: {fileID: 11400000, guid: 05eb57c5a7c6bc9409a97fff9dc92ff1, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: punch2
+      value: 
+      objectReference: {fileID: 11400000, guid: c6c7d341c40b6d545b75866f33ac630d, type: 2}
+    - target: {fileID: 5386576501059772513, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: running
+      value: 
+      objectReference: {fileID: 11400000, guid: 1850f99bc70ff2b4d92b9161703fbd92, type: 2}
     - target: {fileID: 5386576501059772514, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -322,6 +354,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8458211846948085442, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92b627c24665a244b920db132b866542, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfab9eb0a375c4f4397b19c061dae9c8, type: 3}
 --- !u!1 &234445647 stripped
