@@ -1,0 +1,16 @@
+Gooey.png
+size:943,1082
+filter:Linear,Linear
+pma:true
+Bottom
+bounds:2,719,731,361
+MId 3
+bounds:2,9,535,337
+Mid 1
+bounds:540,246,471,324
+rotate:90
+Mid 2
+bounds:2,348,536,369
+offsets:0,0,536,396
+Top
+bounds:539,2,402,242
