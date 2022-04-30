@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 849300355267826371}
-  idle: {fileID: 11400000, guid: 825a41105bf15284c884778e4c0d2866, type: 2}
-  walking: {fileID: 11400000, guid: 7c870d51bf9c3004ba06f0d59236c147, type: 2}
-  jumping: {fileID: 11400000, guid: ba36fb488e25e1e4397c08cdfec925a0, type: 2}
+  idle: {fileID: 11400000, guid: 1167b156e7c1c64429d0c6a4f41ec2a9, type: 2}
+  walking: {fileID: 11400000, guid: f87ae75055fb21d479aff0b3aa85006d, type: 2}
+  jumping: {fileID: 11400000, guid: 93d579472f749924a87671f4c3c8627e, type: 2}
   currentState: 
   speed: 5
   movement: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 928ffa5e6e7b0a74b929f873fbe2b3dd, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 6c68633ce4f67c447a08ffb8fe8f624b, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: eab907acfd5aa264c818f01884a67c41, type: 2}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
