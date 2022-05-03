@@ -29,8 +29,6 @@ public class GameHandler : MonoBehaviour {
                   playerHealth = StartPlayerHealth;
             //}
             updateStatsDisplay();
-			 pauseMenuUI.SetActive(false);
-                GameisPaused = false;
       }
 
       public void playerGetTokens(int newTokens){
@@ -118,7 +116,11 @@ public class GameHandler : MonoBehaviour {
                 }
         }
 
-   
+        void Start (){
+                pauseMenuUI.SetActive(false);
+                GameisPaused = false;
+        }
+
         void Update (){
                 if (Input.GetKeyDown(KeyCode.Escape)){
                         if (GameisPaused){
