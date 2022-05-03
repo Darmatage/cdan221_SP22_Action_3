@@ -2812,5 +2812,5 @@ MonoBehaviour:
   healthText: {fileID: 1229939936}
   tokensText: {fileID: 1169988182}
   isDefending: 0
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 326339641998545836, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
   mixer: {fileID: 24100000, guid: 3aa6b4ed2265a004aab79c4cf6ed6502, type: 2}
