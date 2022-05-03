@@ -11,6 +11,11 @@ public class GameHandler : MonoBehaviour {
       public static int playerHealth = 100;
       public int StartPlayerHealth = 100;
       public GameObject healthText;
+	  
+	  public static bool haveWisp1 =false;
+	  public static bool haveWisp2 =false;
+	  public static bool haveWisp3 =false;
+
 
       public static int gotTokens = 0;
       public GameObject tokensText;
