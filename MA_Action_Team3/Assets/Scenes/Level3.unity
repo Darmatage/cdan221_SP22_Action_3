@@ -2813,4 +2813,4 @@ MonoBehaviour:
   tokensText: {fileID: 1169988182}
   isDefending: 0
   pauseMenuUI: {fileID: 0}
-  mixer: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 3aa6b4ed2265a004aab79c4cf6ed6502, type: 2}
