@@ -13,10 +13,11 @@ public class TimerWisp : MonoBehaviour{
 
 	//failure variables
 	private GameObject theWisp;
-	private Vector2 wispStartingPos;
+	public Vector2 wispStartingPos;
 	public GameObject failMessage;
 
 	void Start(){
+		timerCircleDisplay.gameObject.SetActive(false);
 		returnWispTimer = WispTimerMax;
 		failMessage.SetActive(false);
 	}
@@ -32,7 +33,7 @@ public class TimerWisp : MonoBehaviour{
 		if (gotWisp == true){
 			returnWispTimer -= 0.01f;
 			Debug.Log("time: " + returnWispTimer);
-			
+			timerCircleDisplay.gameObject.SetActive(true);
 			timerCircleDisplay.fillAmount = returnWispTimer / WispTimerMax; 
 			
 			// Color oldCol = timerCircleDisplay.GetComponent<Image>().color;
@@ -59,9 +60,11 @@ public class TimerWisp : MonoBehaviour{
 	
 	
 	public void GotTheWisp(GameObject wisp){
-		gotWisp = true;
-		theWisp = wisp;
-		wispStartingPos = new Vector2(wisp.transform.position.x, wisp.transform.position.y);
+		if (gotWisp == false){
+			gotWisp = true;
+			theWisp = wisp;
+			wispStartingPos = new Vector2(wisp.transform.position.x, wisp.transform.position.y);
+		}
 	}
 	
 	IEnumerator LoseWisp(){

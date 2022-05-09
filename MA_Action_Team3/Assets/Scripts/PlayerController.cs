@@ -6,7 +6,8 @@ using Spine.Unity;
 public class PlayerController : MonoBehaviour{
 	
 	public SkeletonAnimation skeletonAnimation;
-			//Trigger item #1: a class variable for the AnimationReferenceAsset
+	
+	//Trigger item #1: a class variable for the AnimationReferenceAsset
 	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running, wave;
 	public string currentState;
 	public float speed;
@@ -16,13 +17,19 @@ public class PlayerController : MonoBehaviour{
 	public string currentAnimation;
 	public float jumpSpeed;
 	public string previousState;
+	
 	// Added Content to create more controls
 	public bool isAlive = true;
 	public float startSpeed = 3f;
 	public float runSpeed = 6f;
 	public bool isHit1 = true;
 	
-    // use this for initialization.
+	//jump variables
+	public Transform feet;
+	public LayerMask groundLayer;
+    public LayerMask enemyLayer;
+	
+	
     void Start() {
 		rigidbody = GetComponent<Rigidbody2D>();
         currentState = "idle";
@@ -30,10 +37,9 @@ public class PlayerController : MonoBehaviour{
 		SetCharacterState(currentState);
 	}
 
-    // Update is called once per frame
+
     void Update(){
-        Move();
-		
+        Move();		
     }
 	
 	// Sets character animation 
@@ -151,12 +157,28 @@ public class PlayerController : MonoBehaviour{
 	
 	public void Jump(){
 		rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
-		if (!currentState.Equals("Jumping"))
+		if ((!currentState.Equals("Jumping"))&&(IsGrounded()))
 		{
 			previousState = currentState;
 			SetCharacterState("Jumping");
 		}
+		
+		//prevent triple jumping
+		
+		
+		
 	}
+	
+	public bool IsGrounded() {
+		Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
+		Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
+		if ((groundCheck != null) || (enemyCheck != null)) {
+			return true;
+			//Debug.Log("I can jump now!");
+		}
+		return false;
+	}
+	
 	
 	//Trigger item #4: a function that records previous state (to return to idle)
 	public void PlayerAttack(){

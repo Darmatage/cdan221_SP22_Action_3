@@ -16130,7 +16130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5386576501059772514, guid: ed73a1ec28db29347a6eb9af9acfe2c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.18
+      value: -9.71
       objectReference: {fileID: 0}
     - target: {fileID: 5386576501059772514, guid: ed73a1ec28db29347a6eb9af9acfe2c5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16801,7 +16801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197592424}
   m_Layer: 0
-  m_Name: PLATFORMTARGETS
+  m_Name: MOVINGPLATFORMS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

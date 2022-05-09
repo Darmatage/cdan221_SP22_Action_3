@@ -40,6 +40,7 @@ public class Wisp_Behavior : MonoBehaviour{
 	void Update () {
 		float DistToPlayer = Vector3.Distance(transform.position, player.position);
 		if ((player != null) && (isCaptured)) {
+			GetComponent<Pickup_Bob>().enabled=false;
 			// approach player
 			if (Vector2.Distance (transform.position, player.position) > stoppingDistance) {
 				transform.position = Vector2.MoveTowards (transform.position, player.position, speed * Time.deltaTime);
@@ -66,6 +67,8 @@ public class Wisp_Behavior : MonoBehaviour{
 			}
 
 		}
+		//allow bobbing again if wisp is lost
+		GetComponent<Pickup_Bob>().enabled=true;
 	}
 	
 	void OnTriggerEnter2D (Collider2D other){
@@ -74,8 +77,8 @@ public class Wisp_Behavior : MonoBehaviour{
 			if (level2wisp){GameHandler.haveWisp2 = true; isCaptured=true;}
 			if (level3wisp){GameHandler.haveWisp3 = true; isCaptured=true;}
 			StartCoroutine(ColorChange());
-			GetComponent<Pickup_Bob>().enabled=false;
 			
+			//activate timer and wisp release functions
 			gameHandler.GetComponent<TimerWisp>().GotTheWisp(gameObject);
 		}
 	}
