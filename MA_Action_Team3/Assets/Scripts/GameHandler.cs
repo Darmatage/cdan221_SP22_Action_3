@@ -7,25 +7,33 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-      private GameObject player;
-      public static int playerHealth = 100;
-      public int StartPlayerHealth = 100;
-      public GameObject healthText;
+	private GameObject player;
+	public static int playerHealth = 100;
+	public int StartPlayerHealth = 100;
+	public GameObject healthText;
 	  
-	  public static bool haveWisp1 =false;
-	  public static bool haveWisp2 =false;
-	  public static bool haveWisp3 =false;
+	public static bool haveWisp1 =false;
+	public static bool haveWisp2 =false;
+	public static bool haveWisp3 =false;
 
 
-      public static int gotTokens = 0;
-      public GameObject tokensText;
+	public static int gotTokens = 0;
+	public GameObject tokensText;
 
-      public bool isDefending = false;
+	public bool isDefending = false;
 
-      public static bool stairCaseUnlocked = false;
-      //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
+	public static bool stairCaseUnlocked = false;
+	//this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
 
-      private string sceneName;
+	private string sceneName;
+
+	//Pause menu variables
+	public static bool GameisPaused = false;
+	public GameObject pauseMenuUI;
+	public AudioMixer mixer;
+	public static float volumeLevel = 1.0f;
+	private Slider sliderVolumeCtrl;
+
 
       void Start(){
             player = GameObject.FindWithTag("Player");
@@ -37,6 +45,17 @@ public class GameHandler : MonoBehaviour {
 			 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
       }
+
+	void Update (){
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			if (GameisPaused){
+				Resume();
+			}
+			else{
+				Pause();
+			}
+		}
+	}
 
       public void playerGetTokens(int newTokens){
             gotTokens += newTokens;
@@ -106,49 +125,30 @@ public class GameHandler : MonoBehaviour {
       }
 	  
 	  
-	  // The information for the Pause Menu. 
-	  
-	  public static bool GameisPaused = false;
-        public GameObject pauseMenuUI;
-        public AudioMixer mixer;
-        public static float volumeLevel = 1.0f;
-        private Slider sliderVolumeCtrl;
+	// The information for the Pause Menu. 
+	void Awake (){
+		SetLevel (volumeLevel);
+		GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+		if (sliderTemp != null){
+			sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+			sliderVolumeCtrl.value = volumeLevel;
+		}
+	}
 
-        void Awake (){
-                SetLevel (volumeLevel);
-                GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-                if (sliderTemp != null){
-                        sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
-                        sliderVolumeCtrl.value = volumeLevel;
-                }
-        }
+	void Pause(){
+		pauseMenuUI.SetActive(true);
+		Time.timeScale = 0f;
+		GameisPaused = true;
+	}
 
-   
-        void Update (){
-                if (Input.GetKeyDown(KeyCode.Escape)){
-                        if (GameisPaused){
-                                Resume();
-                        }
-                        else{
-                                Pause();
-                        }
-                }
-        }
+	public void Resume(){
+		pauseMenuUI.SetActive(false);
+		Time.timeScale = 1f;
+		GameisPaused = false;
+	}
 
-        void Pause(){
-                pauseMenuUI.SetActive(true);
-                Time.timeScale = 0f;
-                GameisPaused = true;
-        }
-
-        public void Resume(){
-                pauseMenuUI.SetActive(false);
-                Time.timeScale = 1f;
-                GameisPaused = false;
-        }
-
-        public void SetLevel (float sliderValue){
-                mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
-                volumeLevel = sliderValue;
-        } 
+	public void SetLevel (float sliderValue){
+		mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+		volumeLevel = sliderValue;
+	} 
 }

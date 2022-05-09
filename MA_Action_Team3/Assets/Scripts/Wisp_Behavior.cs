@@ -22,6 +22,8 @@ public class Wisp_Behavior : MonoBehaviour{
 	public Color captureColor;	
 	public bool isCaptured = false;
 		
+	private GameObject gameHandler;
+		
 	void Start () {
 		scaleX = gameObject.transform.localScale.x;
 
@@ -30,6 +32,9 @@ public class Wisp_Behavior : MonoBehaviour{
 
 		//anim = GetComponentInChildren<Animator> ();
 		rend = GetComponentInChildren<Renderer> ();
+		
+		gameHandler = GameObject.FindWithTag("GameHandler");
+		
 	}
 
 	void Update () {
@@ -70,6 +75,8 @@ public class Wisp_Behavior : MonoBehaviour{
 			if (level3wisp){GameHandler.haveWisp3 = true; isCaptured=true;}
 			StartCoroutine(ColorChange());
 			GetComponent<Pickup_Bob>().enabled=false;
+			
+			gameHandler.GetComponent<TimerWisp>().GotTheWisp(gameObject);
 		}
 	}
 	
