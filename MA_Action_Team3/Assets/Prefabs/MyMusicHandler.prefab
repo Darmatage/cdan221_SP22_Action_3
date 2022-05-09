@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1271992879085472285}
   - component: {fileID: 1271992879085472290}
   m_Layer: 0
-  m_Name: MyMusicMixer
+  m_Name: MyMusicHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
