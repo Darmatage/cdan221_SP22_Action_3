@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour{
 	
 	//jump variables
 	public Transform feet;
+	public bool canJump = false;
+	public int jumpTimes = 0;
 	public LayerMask groundLayer;
     public LayerMask enemyLayer;
 	
@@ -39,7 +41,8 @@ public class PlayerController : MonoBehaviour{
 
 
     void Update(){
-        Move();		
+        Move();	
+		
     }
 	
 	// Sets character animation 
@@ -156,23 +159,24 @@ public class PlayerController : MonoBehaviour{
 	}
 	
 	public void Jump(){
-		rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
-		if ((!currentState.Equals("Jumping"))&&(IsGrounded()))
-		{
-			previousState = currentState;
-			SetCharacterState("Jumping");
+		if ((IsGrounded())||(jumpTimes <= 1)){canJump=true;}
+		else if (jumpTimes > 1){canJump=false;}
+		
+		if (canJump){
+			jumpTimes+=1;
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
+			if (!currentState.Equals("Jumping")){
+				previousState = currentState;
+				SetCharacterState("Jumping");
+			}
 		}
-		
-		//prevent triple jumping
-		
-		
-		
 	}
 	
 	public bool IsGrounded() {
 		Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
 		Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
 		if ((groundCheck != null) || (enemyCheck != null)) {
+			jumpTimes = 0;
 			return true;
 			//Debug.Log("I can jump now!");
 		}
