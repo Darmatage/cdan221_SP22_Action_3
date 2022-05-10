@@ -1,0 +1,34 @@
+Zan.png
+size:2018,782
+filter:Linear,Linear
+pma:true
+Body
+bounds:2,2,687,778
+offsets:0,11,687,795
+Head Frills Back
+bounds:1065,32,276,319
+offsets:0,14,302,333
+Head Frills Front
+bounds:691,24,372,327
+offsets:0,0,376,327
+Left Arm
+bounds:1343,15,196,336
+offsets:1,1,197,338
+Left Leg
+bounds:1541,108,237,293
+offsets:0,1,237,294
+Right Arm
+bounds:1494,403,291,377
+offsets:0,1,291,378
+Right Leg
+bounds:1780,110,234,291
+offsets:0,1,234,292
+Tail
+bounds:691,353,801,427
+Tail End
+bounds:1541,51,75,55
+offsets:1,0,77,56
+Tail Frills 2
+bounds:1787,498,282,229
+offsets:0,8,301,237
+rotate:90

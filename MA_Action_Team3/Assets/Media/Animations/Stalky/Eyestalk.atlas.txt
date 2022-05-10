@@ -1,0 +1,15 @@
+Eyestalk.png
+size:382,890
+filter:Linear,Linear
+pma:true
+Grass
+bounds:270,296,294,52
+rotate:90
+Layer 2
+bounds:90,592,290,296
+offsets:2,1,293,299
+Leaves
+bounds:90,257,333,178
+rotate:90
+Stalk
+bounds:2,2,86,886

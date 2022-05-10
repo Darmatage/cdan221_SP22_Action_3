@@ -1,0 +1,21 @@
+Jelly.png
+size:1420,440
+filter:Linear,Linear
+pma:true
+Bottom
+bounds:482,39,399,305
+rotate:90
+Eye
+bounds:1068,2,127,294
+offsets:1,0,128,294
+rotate:90
+Frills Left
+bounds:1068,131,174,307
+Frills Right
+bounds:1244,131,174,307
+Middle
+bounds:789,7,431,277
+rotate:90
+Top
+bounds:2,25,478,413
+offsets:0,0,487,413

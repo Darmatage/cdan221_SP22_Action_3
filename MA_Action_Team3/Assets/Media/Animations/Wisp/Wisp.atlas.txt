@@ -1,0 +1,26 @@
+Wisp.png
+size:515,348
+filter:Linear,Linear
+pma:true
+Background
+bounds:2,46,300,300
+offsets:1,1,302,302
+Layer 1
+bounds:304,131,209,215
+offsets:20,41,302,302
+Layer 2
+bounds:304,9,121,120
+offsets:157,181,302,302
+Layer 3
+bounds:510,128,1,1
+Layer 4
+bounds:427,7,81,122
+offsets:92,179,302,302
+Layer 5
+bounds:2,2,42,44
+offsets:202,58,302,302
+rotate:90
+Layer 6
+bounds:48,18,26,29
+offsets:247,52,302,302
+rotate:90

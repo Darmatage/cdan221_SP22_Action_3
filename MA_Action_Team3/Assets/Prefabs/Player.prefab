@@ -166,6 +166,8 @@ MonoBehaviour:
   runSpeed: 6
   isHit1: 1
   feet: {fileID: 2888795599636115896}
+  canJump: 0
+  jumpTimes: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -253,7 +255,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 150
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &849300355267826371
 MonoBehaviour:
