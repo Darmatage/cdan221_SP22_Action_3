@@ -13,8 +13,7 @@ public class TreasureChest_Damage : MonoBehaviour {
 	public GameObject openArt;
 
 	public GameObject breakMe;	
-
-	public GameObject treasure;
+	public GameObject treasureOBJ;
 
 
 	void Start(){
@@ -28,12 +27,12 @@ public class TreasureChest_Damage : MonoBehaviour {
 		
 	}
 
-	void OntriggerEnter2D(Collider other){
+	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "Player"){breakMe.SetActive(true);}
 	}
 
-	void OntriggerExit2D(Collider other){
-		if (other.gameObject.tag == "Player"){ breakMe.SetActive(false);	}
+	void OnTriggerExit2D(Collider2D other){
+		if (other.gameObject.tag == "Player"){ breakMe.SetActive(false);}
 	}
 
 	public void TakeDamage(int damage){
@@ -53,7 +52,7 @@ public class TreasureChest_Damage : MonoBehaviour {
 			closedArt.SetActive(false);
 			openArt.SetActive(true);
 			
-			Instantiate (treasure, transform.position, Quaternion.identity);
+			Instantiate (treasureOBJ, transform.position, Quaternion.identity);
 			  
               //StartCoroutine(Death());
        }

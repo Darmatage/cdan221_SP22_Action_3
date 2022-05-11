@@ -17,9 +17,9 @@ public class EnemyMeleeDamage : MonoBehaviour {
 
        public void TakeDamage(int damage){
               currentHealth -= damage;
-              //rend.material.color = new Color(2.4f, 0.9f, 0.9f, 1f);
-              //StartCoroutine(ResetColor());
-              //anim.SetTrigger ("Hurt");
+              rend.material.color = new Color(2.4f, 0.9f, 0.9f, 1f);
+              StartCoroutine(ResetColor());
+              anim.SetTrigger ("Hurt");
               if (currentHealth <= 0){
                      Die();
               }
@@ -27,7 +27,7 @@ public class EnemyMeleeDamage : MonoBehaviour {
 
        void Die(){
               Instantiate (healthLoot, transform.position, Quaternion.identity);
-              //anim.SetBool ("isDead", true);
+              anim.SetTrigger ("Die");
               GetComponent<Collider2D>().enabled = false;
               StartCoroutine(Death());
        }

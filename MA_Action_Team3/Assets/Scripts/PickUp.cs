@@ -9,6 +9,8 @@ public class PickUp : MonoBehaviour{
 	public bool isHealthPickUp = true;
 	public bool increaseHealthMax =false;
 	public bool isSpeedBoostPickUp = false;
+	public bool isOrb = false;
+
 
 	public int healthBoost = 10;
 	public float speedBoost = 2f;
@@ -40,6 +42,12 @@ public class PickUp : MonoBehaviour{
 				other.gameObject.GetComponent<PlayerMove>().speedBoost(speedBoost, speedTime);
 				//playerPowerupVFX.powerup();
 			}
+		
+			if (isOrb == true) {
+				gameHandler.playerGetTokens(1);
+				//playerPowerupVFX.powerup();
+			}
+			
 		}
 	}
 

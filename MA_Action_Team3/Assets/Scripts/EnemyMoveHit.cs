@@ -10,12 +10,15 @@ public class EnemyMoveHit : MonoBehaviour {
        private Transform target;
        public int damage = 10;
 
-       public int EnemyLives = 3;
+       //public int EnemyLives = 3;
        private GameHandler gameHandler;
 
        public float attackRange = 10;
        public bool isAttacking = false;
+	   public bool canHit = true;
        private float scaleX;
+	   
+	   public float AttackCooldown = 1f;
 
        void Start () {
               anim = GetComponentInChildren<Animator> ();
@@ -34,10 +37,10 @@ public class EnemyMoveHit : MonoBehaviour {
        void Update () {
               float DistToPlayer = Vector3.Distance(transform.position, target.position);
 
-              if ((target != null) && (DistToPlayer <= attackRange)){
+              if ((target != null) && (DistToPlayer <= attackRange) && (canHit)){
                      transform.position = Vector2.MoveTowards (transform.position, target.position, speed * Time.deltaTime);
                      if (isAttacking == false) {
-                            //anim.SetBool("Walk", true);
+                            anim.SetBool("Walk", true);
                             //flip enemy to face player direction. Wrong direction? Swap the * -1.
                             if (target.position.x > gameObject.transform.position.x){
                                    gameObject.transform.localScale = new Vector2(scaleX, gameObject.transform.localScale.y);
@@ -45,25 +48,34 @@ public class EnemyMoveHit : MonoBehaviour {
                                     gameObject.transform.localScale = new Vector2(scaleX * -1, gameObject.transform.localScale.y);
                             }
                      }
-                     //else  { anim.SetBool("Walk", false);}
+                     else  { anim.SetBool("Walk", false);}
               }
-               //else { anim.SetBool("Walk", false);}
+              else { anim.SetBool("Walk", false);}
        }
 
-       public void OnCollisionEnter2D(Collision2D other){
-              if (other.gameObject.tag == "Player") {
-                     isAttacking = true;
-                     //anim.SetBool("Attack", true);
-                     gameHandler.playerGetHit(damage);
-              }
-       }
+	public void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "Player") {
+			isAttacking = true;
+			if (canHit == true){
+				anim.SetTrigger("Attack");
+				gameHandler.playerGetHit(damage);
+				canHit = false;
+				StartCoroutine(CoolDown());
+			}
+		}
+	}
 
        public void OnCollisionExit2D(Collision2D other){
               if (other.gameObject.tag == "Player") {
                      isAttacking = false;
-                     //anim.SetBool("Attack", false);
               }
        }
+
+
+	IEnumerator CoolDown(){
+		yield return new WaitForSeconds(AttackCooldown);
+		canHit = true;
+	}
 
        //DISPLAY the range of enemy's attack when selected in the Editor
        void OnDrawGizmosSelected(){

@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 5274576453759545514}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1693241336582874214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7508505540613418511}
+  m_Layer: 8
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7508505540613418511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693241336582874214}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.65, y: 3.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5274576453759545514}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5274576453759545488
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,6 +73,8 @@ GameObject:
   - component: {fileID: 5274576453759545518}
   - component: {fileID: 5274576453759545519}
   - component: {fileID: 5274576453759545513}
+  - component: {fileID: 1883646988378615593}
+  - component: {fileID: 7201678065352032589}
   m_Layer: 8
   m_Name: Player2
   m_TagString: Player
@@ -64,6 +96,7 @@ Transform:
   - {fileID: 5875674981241560463}
   - {fileID: 6830048033719934700}
   - {fileID: 3162909942426231152}
+  - {fileID: 7508505540613418511}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -174,6 +207,41 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &1883646988378615593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274576453759545488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccae3c477736541499eb5e60b60847ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPt: {fileID: 7508505540613418511}
+  attackRange: 0.5
+  attackRate: 2
+  attackDamage: 15
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  chestLayers:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!114 &7201678065352032589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274576453759545488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d108cbd0ffe6498d82cad03b5d2bde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2D: {fileID: 0}
 --- !u!1 &5917253457885215235
 GameObject:
   m_ObjectHideFlags: 0
