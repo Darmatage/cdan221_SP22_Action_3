@@ -9,7 +9,7 @@ public class PickUp : MonoBehaviour{
       public bool isHealthPickUp = true;
       public bool isSpeedBoostPickUp = false;
 
-      public int healthBoost = 50;
+      public int healthBoost = 10;
       public float speedBoost = 2f;
       public float speedTime = 2f;
 
@@ -22,7 +22,7 @@ public class PickUp : MonoBehaviour{
             if (other.gameObject.tag == "Player"){
 				Debug.Log("Hit Player");
                   GetComponent<Collider2D>().enabled = false;
-                  GetComponent<AudioSource>().Play();
+                  //GetComponent<AudioSource>().Play();
                   StartCoroutine(DestroyThis());
 
                   if (isHealthPickUp == true) {

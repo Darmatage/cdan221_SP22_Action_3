@@ -20,6 +20,8 @@ public class NPCDialogue : MonoBehaviour {
 
        private void OnTriggerEnter2D(Collider2D other){
               if (other.gameObject.tag == "Player") {
+				  Debug.Log("I touched player to say hi");
+				  
                      playerInRange = true;
                      dialogueMNGR.LoadDialogueArray(dialogue, dialogueLength);
                      dialogueMNGR.OpenDialogue();

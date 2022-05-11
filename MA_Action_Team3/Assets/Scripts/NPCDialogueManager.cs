@@ -26,6 +26,11 @@ public class NPCDialogueManager : MonoBehaviour {
                      dialogueText.text = "..."; //reset text
                      counter = 0; //reset counter
               }
+			  
+			  if (Input.GetKeyDown("z")){
+                     DialogueNext();
+              }
+			  
        }
 
        public void OpenDialogue(){
