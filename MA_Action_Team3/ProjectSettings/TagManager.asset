@@ -8,6 +8,7 @@ TagManager:
   - GameHandler
   - HeadLevel
   - DialogueManager
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
