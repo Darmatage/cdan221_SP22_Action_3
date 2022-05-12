@@ -34,8 +34,17 @@ public class GameHandler : MonoBehaviour {
 	public static float volumeLevel = 1.0f;
 	private Slider sliderVolumeCtrl;
 
+	void Awake (){
+		SetLevel (volumeLevel);
+		GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+		if (sliderTemp != null){
+			sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+			sliderVolumeCtrl.value = volumeLevel;
+		}
+	}
 
-      void Start(){
+
+    void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
@@ -57,10 +66,30 @@ public class GameHandler : MonoBehaviour {
 		}
 	}
 
-      public void playerGetTokens(int newTokens){
+	// The information for the Pause Menu. 
+
+	void Pause(){
+		pauseMenuUI.SetActive(true);
+		Time.timeScale = 0f;
+		GameisPaused = true;
+	}
+
+	public void Resume(){
+		pauseMenuUI.SetActive(false);
+		Time.timeScale = 1f;
+		GameisPaused = false;
+	}
+
+	public void SetLevel (float sliderValue){
+		mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+		volumeLevel = sliderValue;
+	} 
+
+
+    public void playerGetTokens(int newTokens){
             gotTokens += newTokens;
             updateStatsDisplay();
-      }
+    }
 
       public void playerGetHit(int damage){
            if (isDefending == false){
@@ -125,30 +154,5 @@ public class GameHandler : MonoBehaviour {
       }
 	  
 	  
-	// The information for the Pause Menu. 
-	void Awake (){
-		SetLevel (volumeLevel);
-		GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
-		if (sliderTemp != null){
-			sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
-			sliderVolumeCtrl.value = volumeLevel;
-		}
-	}
 
-	void Pause(){
-		pauseMenuUI.SetActive(true);
-		Time.timeScale = 0f;
-		GameisPaused = true;
-	}
-
-	public void Resume(){
-		pauseMenuUI.SetActive(false);
-		Time.timeScale = 1f;
-		GameisPaused = false;
-	}
-
-	public void SetLevel (float sliderValue){
-		mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
-		volumeLevel = sliderValue;
-	} 
 }

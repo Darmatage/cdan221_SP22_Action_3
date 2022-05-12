@@ -1386,6 +1386,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
       objectReference: {fileID: 0}
+    - target: {fileID: 1110307613285219651, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110307613285219651, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110307613285219651, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1898427957011776977, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1493,6 +1505,22 @@ PrefabInstance:
     - target: {fileID: 3679423793260977892, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132544672001307007, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6501026345802643697}
+    - target: {fileID: 4132544672001307007, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902468625123475853, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902468625123475853, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
