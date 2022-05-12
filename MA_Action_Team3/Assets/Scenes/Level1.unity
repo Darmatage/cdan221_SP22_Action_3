@@ -24833,6 +24833,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5274576453759545513, guid: 1822cab78b258e449b092c9e6479449b, type: 3}
+      propertyPath: jumpTimes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5274576453759545513, guid: 1822cab78b258e449b092c9e6479449b, type: 3}
       propertyPath: startSpeed
       value: 3
       objectReference: {fileID: 0}

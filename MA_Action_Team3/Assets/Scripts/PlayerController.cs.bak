@@ -6,7 +6,9 @@ using Spine.Unity;
 public class PlayerController : MonoBehaviour{
 	
 	public SkeletonAnimation skeletonAnimation;
-	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running;
+	
+	//Trigger item #1: a class variable for the AnimationReferenceAsset
+	public AnimationReferenceAsset idle, walking, jumping, crouch, death, hurt, fall, punch, punch2, stomp, running, wave;
 	public string currentState;
 	public float speed;
 	public float movement;
@@ -15,13 +17,21 @@ public class PlayerController : MonoBehaviour{
 	public string currentAnimation;
 	public float jumpSpeed;
 	public string previousState;
+	
 	// Added Content to create more controls
 	public bool isAlive = true;
 	public float startSpeed = 3f;
 	public float runSpeed = 6f;
 	public bool isHit1 = true;
 	
-    // use this for initialization.
+	//jump variables
+	public Transform feet;
+	public bool canJump = false;
+	public int jumpTimes = 0;
+	public LayerMask groundLayer;
+    public LayerMask enemyLayer;
+	
+	
     void Start() {
 		rigidbody = GetComponent<Rigidbody2D>();
         currentState = "idle";
@@ -29,9 +39,9 @@ public class PlayerController : MonoBehaviour{
 		SetCharacterState(currentState);
 	}
 
-    // Update is called once per frame
+
     void Update(){
-        Move();
+        Move();	
 		
     }
 	
@@ -54,6 +64,13 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetCharacterState(previousState);
 		}
+		
+		//Trigger item #5: After animation is done, set the state back to the previous state
+		if((currentState.Equals("Punch1"))||(currentState.Equals("Punch2")))
+		{
+			SetCharacterState(previousState);
+		}
+		
 	}
 	
 	//checks character state and sets the animation accordingly.
@@ -71,6 +88,8 @@ public class PlayerController : MonoBehaviour{
 		{
 			SetAnimation(running, true, 1f);
 		}
+		
+		//Trigger item #2: set the connection between the state and the animation (animation name, looping=false, speed multiplier=1f)
 		else if (state.Equals("Punch1"))
 		{
 			SetAnimation(punch, false, 1f);
@@ -129,32 +148,54 @@ public class PlayerController : MonoBehaviour{
 				}
 		}
 		
-		if (Input.GetButtonDown("Jump"))
-		{
-		Jump();
+		if (Input.GetButtonDown("Jump")){
+			Jump();
 		}
 		
+		//Trigger item #3: set the input in the Move() function
 		if (Input.GetButtonDown("Attack")){
 			PlayerAttack();
 		}
 	}
 	
-	public void Jump()
-	{
-		rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
-		if (!currentState.Equals("Jumping"))
-		{
-			previousState = currentState;
-		SetCharacterState("Jumping");
+	public void Jump(){
+		if ((IsGrounded())||(jumpTimes <= 1)){canJump=true;}
+		else if (jumpTimes > 1){canJump=false;}
+		
+		if (canJump){
+			jumpTimes+=0;
+			rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpSpeed);
+			if (!currentState.Equals("Jumping")){
+				previousState = currentState;
+				SetCharacterState("Jumping");
+			}
 		}
 	}
-	public void PlayerAttack()
-	{
-		if (!currentState.Equals("Punch1"))
-		{
-			previousState = currentState;
-		SetCharacterState("Punch1");
+	
+	public bool IsGrounded() {
+		Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 2f, groundLayer);
+		Collider2D enemyCheck = Physics2D.OverlapCircle(feet.position, 2f, enemyLayer);
+		if ((groundCheck != null) || (enemyCheck != null)) {
+			jumpTimes = 0;
+			return true;
+			//Debug.Log("I can jump now!");
+		}
+		return false;
+	}
+	
+	
+	//Trigger item #4: a function that records previous state (to return to idle)
+	public void PlayerAttack(){
+		if ((!currentState.Equals("Punch1"))||(!currentState.Equals("Punch2"))){
+			previousState = "Idle";
+			//SetCharacterState("Punch1");
+			
+			if (isHit1){SetCharacterState("Punch1");}
+			else {SetCharacterState("Punch2");}
+			isHit1 = !isHit1;
+			//add PlayerAttackMelee script to the player, following tutorial for hitpoint and enemies layer
 		}
 	}
+	
 }
 
