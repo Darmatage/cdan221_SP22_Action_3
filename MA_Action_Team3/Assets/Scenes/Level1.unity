@@ -3273,6 +3273,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &193251723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1174896953}
+    m_Modifications:
+    - target: {fileID: 2653040211248618601, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_Name
+      value: Platform (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_RootOrder
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -31.374283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+--- !u!4 &193251724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+  m_PrefabInstance: {fileID: 193251723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &201873750
 GameObject:
   m_ObjectHideFlags: 0
@@ -13458,6 +13520,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &812220564
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1174896953}
+    m_Modifications:
+    - target: {fileID: 2653040211248618601, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_Name
+      value: Platform (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_RootOrder
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -29.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+--- !u!4 &812220565 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7414129975671113421, guid: 74dfd4bca463f584583c0f0bc5d4d1f7, type: 3}
+  m_PrefabInstance: {fileID: 812220564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &818277086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20796,6 +20920,8 @@ Transform:
   - {fileID: 621271046}
   - {fileID: 11748158}
   - {fileID: 1304390945}
+  - {fileID: 812220565}
+  - {fileID: 193251724}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25783,6 +25909,7 @@ PolygonCollider2D:
       - {x: -33.169907, y: -5.6543136}
       - {x: -33.651104, y: -5.311642}
       - {x: -33.91507, y: -3.5568533}
+      - {x: -33.963505, y: -1.6319947}
       - {x: -34.06916, y: 2.5669022}
       - {x: -34.152218, y: 5.8677425}
       - {x: -34.04717, y: 7.103652}
