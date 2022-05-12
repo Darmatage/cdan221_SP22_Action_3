@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4023924871294350103
 Transform:
   m_ObjectHideFlags: 0
@@ -75,10 +75,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
   isHealthPickUp: 1
+  increaseHealthMax: 0
   isSpeedBoostPickUp: 0
+  isOrb: 0
   healthBoost: 50
   speedBoost: 2
   speedTime: 2
+  healthMaxIncrease: 10
 --- !u!82 &2299212726037147727
 AudioSource:
   m_ObjectHideFlags: 0
