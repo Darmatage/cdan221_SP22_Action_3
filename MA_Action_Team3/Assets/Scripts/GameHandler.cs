@@ -47,9 +47,9 @@ public class GameHandler : MonoBehaviour {
     void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
-            //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
+            if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
                   playerHealth = StartPlayerHealth;
-            //}
+            }
             updateStatsDisplay();
 			 pauseMenuUI.SetActive(false);
                 GameisPaused = false;
@@ -102,12 +102,14 @@ public class GameHandler : MonoBehaviour {
 				  }
             }
 
-           if (playerHealth >= StartPlayerHealth){
+           if (playerHealth > StartPlayerHealth){
                   playerHealth = StartPlayerHealth;
+				  updateStatsDisplay();
             }
 
            if (playerHealth <= 0){
                   playerHealth = 0;
+				  updateStatsDisplay();
                   playerDies();
             }
       }

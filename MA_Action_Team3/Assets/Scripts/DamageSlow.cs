@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageSlow : MonoBehaviour {
 
        public int damage = 1;
-       public float damageTime = 0.5f;
+       public float damageTime = 2.5f;
        private bool isDamaging = false;
        private float damageTimer = 0f;
        private GameHandler gameHandlerObj;
@@ -29,6 +29,7 @@ public class DamageSlow : MonoBehaviour {
        void OnTriggerStay2D(Collider2D other){
               if (other.gameObject.tag == "HeadLevel") {
                      isDamaging = true;
+					 //Debug.Log("Player entered water");
               }
        }
 

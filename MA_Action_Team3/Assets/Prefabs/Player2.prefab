@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6830048033719934700}
+  - component: {fileID: 4467314099633323426}
   m_Layer: 0
   m_Name: HeadLevel
   m_TagString: HeadLevel
@@ -30,6 +31,32 @@ Transform:
   m_Father: {fileID: 5274576453759545514}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4467314099633323426
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034373711809251141}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1693241336582874214
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,6 +103,7 @@ GameObject:
   - component: {fileID: 1883646988378615593}
   - component: {fileID: 7201678065352032589}
   - component: {fileID: 7953057398027858719}
+  - component: {fileID: 6448038621490168908}
   m_Layer: 8
   m_Name: Player2
   m_TagString: Player
@@ -255,6 +283,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d329fa9c8c1151a4f8eecf7ef0d33973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6448038621490168908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5274576453759545488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b1f0796c31d2c459899a9ab14f4f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!1 &5917253457885215235
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 92b627c24665a244b920db132b866542, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
