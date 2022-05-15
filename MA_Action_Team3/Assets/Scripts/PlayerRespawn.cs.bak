@@ -23,7 +23,7 @@ public class PlayerRespawn : MonoBehaviour {
        }
 
        public void OnTriggerEnter2D(Collider2D other) {
-              if (other.gameObject.tag == "Checkpoint"){
+              if (other.gameObject.tag == "CheckPoint"){
                             pSpawn = other.gameObject.transform;
                             GameObject thisCheckpoint = other.gameObject;
                             StopCoroutine(changeColor(thisCheckpoint));
