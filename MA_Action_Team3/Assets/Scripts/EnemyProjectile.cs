@@ -32,7 +32,7 @@ public class EnemyProjectile : MonoBehaviour {
               if (collision.gameObject.tag == "Player") {
                      gameHandlerObj.playerGetHit(damage);
               }
-              if (collision.gameObject.tag != "enemyShooter") {
+              if (collision.gameObject.tag != "EnemyShooter") {
                      GameObject animEffect = Instantiate (hitEffectAnim, transform.position, Quaternion.identity);
                      Destroy (animEffect, 0.5f);
                      Destroy (gameObject);

@@ -30640,6 +30640,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1419129103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2181854760647216352, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_Name
+      value: Enemy_EyeStalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181854760647216383, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377006566951696845, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2181854760647216381, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: dbb2d59b31252bc43ba854cfe05808ab, type: 3}
 --- !u!1 &1419667453
 GameObject:
   m_ObjectHideFlags: 0

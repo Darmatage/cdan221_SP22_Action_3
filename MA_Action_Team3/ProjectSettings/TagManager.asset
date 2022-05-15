@@ -9,6 +9,7 @@ TagManager:
   - HeadLevel
   - DialogueManager
   - Checkpoint
+  - EnemyShoot
   layers:
   - Default
   - TransparentFX
