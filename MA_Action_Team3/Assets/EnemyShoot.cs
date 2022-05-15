@@ -8,6 +8,7 @@ public class EnemyShoot : MonoBehaviour {
 	private float timeBtwShots;
 	public float startTimeBtwShots = 2;
 	public GameObject projectile;
+	public Transform FirePoint;
 
 	private Transform player;
 	private Vector2 PlayerVect;
@@ -48,7 +49,7 @@ public class EnemyShoot : MonoBehaviour {
 				isAttacking = true;
 				//anim.SetBool("IdleAttention", false);
 				anim.SetTrigger("Attack");
-				Instantiate (projectile, transform.position, Quaternion.identity);
+				Instantiate (projectile, FirePoint.position, Quaternion.identity);
 				timeBtwShots = startTimeBtwShots;
 			} else {
 				timeBtwShots -= Time.deltaTime;
