@@ -7559,7 +7559,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662084373}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -280.62997, y: -19.61, z: 0}
+  m_LocalPosition: {x: -281.05, y: -21.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1435769975}
@@ -28148,6 +28148,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3178177376953862953, guid: 296d93ec03d03454d85573a07d883c32, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5364266870893011394, guid: 296d93ec03d03454d85573a07d883c32, type: 3}
       propertyPath: m_Name
       value: Wisp
