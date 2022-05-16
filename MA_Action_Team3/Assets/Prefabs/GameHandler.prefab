@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPlayerHealth: 100
-  healthText: {fileID: 1772960603099436802, guid: bd2144f9285720043978a4c1d8c36648, type: 3}
+  healthText: {fileID: 0}
   tokensText: {fileID: 0}
   isDefending: 0
-  pauseMenuUI: {fileID: 326339641998545836, guid: 65b44d651b45aa6449ffbd5ddc6119a9, type: 3}
-  mixer: {fileID: 0}
+  pauseMenuUI: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 3aa6b4ed2265a004aab79c4cf6ed6502, type: 2}
