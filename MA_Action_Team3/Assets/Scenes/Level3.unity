@@ -2508,7 +2508,7 @@ GameObject:
   - component: {fileID: 289030339}
   - component: {fileID: 289030341}
   - component: {fileID: 289030340}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4461,7 +4461,7 @@ GameObject:
   - component: {fileID: 555911410}
   - component: {fileID: 555911412}
   - component: {fileID: 555911411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5058,7 +5058,7 @@ GameObject:
   - component: {fileID: 599779131}
   - component: {fileID: 599779133}
   - component: {fileID: 599779132}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9017,7 +9017,7 @@ GameObject:
   - component: {fileID: 1061078489}
   - component: {fileID: 1061078491}
   - component: {fileID: 1061078490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10364,7 +10364,7 @@ GameObject:
   - component: {fileID: 1241343684}
   - component: {fileID: 1241343686}
   - component: {fileID: 1241343685}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10961,7 +10961,7 @@ GameObject:
   - component: {fileID: 1366590012}
   - component: {fileID: 1366590014}
   - component: {fileID: 1366590013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12070,7 +12070,7 @@ GameObject:
   - component: {fileID: 1555000457}
   - component: {fileID: 1555000459}
   - component: {fileID: 1555000458}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16033,7 +16033,7 @@ GameObject:
   - component: {fileID: 1942438467}
   - component: {fileID: 1942438468}
   - component: {fileID: 1942438469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: small_floating_rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
