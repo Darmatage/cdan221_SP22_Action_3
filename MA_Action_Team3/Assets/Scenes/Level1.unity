@@ -50343,7 +50343,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1315767c08daf594686df014e6387ac9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -50377,13 +50377,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -51842,11 +51842,11 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.49
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -51899,7 +51899,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.59
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -53739,7 +53739,7 @@ ParticleSystem:
     range: {x: 0, y: 1}
     separateAxes: 0
   RotationBySpeedModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -67272,11 +67272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5274576453759545514, guid: 1822cab78b258e449b092c9e6479449b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -72
+      value: -91.88
       objectReference: {fileID: 0}
     - target: {fileID: 5274576453759545514, guid: 1822cab78b258e449b092c9e6479449b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 97.3
+      value: 95.9
       objectReference: {fileID: 0}
     - target: {fileID: 5274576453759545514, guid: 1822cab78b258e449b092c9e6479449b, type: 3}
       propertyPath: m_LocalPosition.z
