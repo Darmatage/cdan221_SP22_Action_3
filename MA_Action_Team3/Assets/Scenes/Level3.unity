@@ -12544,7 +12544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameHandler: {fileID: 0}
   playerPos: {fileID: 0}
-  pSpawn: {fileID: 0}
+  pSpawn: {fileID: 894734157}
   damage: 10
 --- !u!4 &1613578829
 Transform:
