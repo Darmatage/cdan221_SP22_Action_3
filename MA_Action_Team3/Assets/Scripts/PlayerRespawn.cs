@@ -13,11 +13,15 @@ public class PlayerRespawn : MonoBehaviour {
 
        void Update() {
               if (pSpawn != null){
-                     if (GameHandler.playerHealth <= 0){
+                     if (GameHandler.playerHealth <= 5){
                             //comment out lines from GameHandler about EndLose screen
                             Debug.Log("I am going back to the last spawn point");
                             Vector3 pSpn2 = new Vector3(pSpawn.position.x, pSpawn.position.y, transform.position.z);
                             gameObject.transform.position = pSpn2;
+							
+							GameHandler.playerHealth = 100;
+							gameHandler.updateStatsDisplay();
+							
                      }
               }
        }
