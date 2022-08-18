@@ -768,6 +768,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24100000, guid: 3aa6b4ed2265a004aab79c4cf6ed6502, type: 2}
     - target: {fileID: 6655769257297552324, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
+      propertyPath: heart1
+      value: 
+      objectReference: {fileID: 348608955}
+    - target: {fileID: 6655769257297552324, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
+      propertyPath: heart2
+      value: 
+      objectReference: {fileID: 348608955}
+    - target: {fileID: 6655769257297552324, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
+      propertyPath: heart3
+      value: 
+      objectReference: {fileID: 348608955}
+    - target: {fileID: 6655769257297552324, guid: 404b7817d37ec4c76bb287aa6f49e48d, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1713367131}
